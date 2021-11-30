@@ -5,7 +5,7 @@ var port = new SerialPort(portName, {baudRate: 115200,autoOpen:false, parser: Se
 
 //**** SENDING
 
-var sent_data = 'a'
+var sent_data = '4'
 
 port.open(function(err){
   if(err){
@@ -37,9 +37,9 @@ port.open(function(err){
 // //   console.log('Data received: ', ready);
 // });
 
-// port.on('readable', function () {
-//   console.log('Data2:', port.read());
-// });
+port.on('readable', function () {
+  console.log('Data2:', port.read());
+});
 
 // port.on('error',function(err){
 //     console.log(err)
